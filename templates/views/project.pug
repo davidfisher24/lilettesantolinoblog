@@ -1,0 +1,37 @@
+extends ../layouts/default
+
+block content
+	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+		article
+			p: a(href='/portfolio') &larr; back to the portfolio
+			hr
+			if !data.project
+				h2 Invalid Project.
+			else
+				header
+					// Title
+					h1= data.project.title
+				.post
+					// Main Image
+					.image-wrap: img(src=data.project.selectedImage._.image.fit(750,450)).img-responsive
+					// Html Content
+					p!= data.project.content
+
+					// Small Images with their text
+					for image in data.project.projectImages
+						img(src=image._.image.fit(200,200)).img-responsive
+						h4 #{image.description}
+
+				.info
+					// Main Category
+					p Main Category: #{data.project.mainCategory}
+					// Sub Categories
+					p Sub Categories: 
+						for subCat in data.project.subCategories
+							span #{subCat.name} 
+					// Tags
+					p Tags:
+						for tag in data.project.tags
+							span #{tag.name} 
+
+

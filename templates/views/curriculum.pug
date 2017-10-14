@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block intro
+	.container
+		h1 #{data.curriculum.heading}
+		
+block content
+	.container
+		if data.curriculum.image.exists
+			img(src=data.curriculum._.image.fit(160,160)).img.pull-right
+
+	.container
+		p #{data.curriculum.description}
+
+		h3 Skills
+		ul
+			for skill in data.skills
+				li #{skill.description}
+
+		h3 Education
+		ul
+			for education in data.educations
+				li #{education.description}
+				span #{education._.from.format('D MMMM YYYY')} - #{education._.to.format('D MMMM YYYY')}
+
+		h3 Experience
+		ul
+			for experience in data.experiences
+				li #{experience.description}
+				span #{experience._.from.format('D MMMM YYYY')} - #{experience._.to.format('D MMMM YYYY')}

@@ -1,0 +1,21 @@
+extends ../layouts/default
+
+block content
+
+		//p!= data.content.contentTitle
+		//br
+		//p!= data.content.contentDescription
+
+		.container: div
+			.row
+				.col-md-4
+					img(src='images/portrait.jpg').img-responsive
+				.col-md-8
+
+					h1!= data.content.contentTitle
+
+					h3!= data.content.contentDescription
+
+					for project in data.projects
+						a(href='portfolio/project/' + project.id)
+							img(src=project.selectedImage._.image.fit(200,200)).img.img-responsive.pull-left
