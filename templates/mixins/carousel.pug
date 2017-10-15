@@ -27,19 +27,21 @@ mixin carousel(id,items)
 				if(index === 0)
 					.item.active
 						div.col-md-4
-							img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
-							//+carousel-caption(item)
+							a(href='portfolio/project/' + item.id)
+								img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
+								//+carousel-caption(item)
 
 				else
 					.item
 						div.col-md-4
-							img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
-							//+carousel-caption(item)
+							a(href='portfolio/project/' + item.id)
+								img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
+								//+carousel-caption(item)
 
 		//-  Controls
 		a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
-			//+icon("chevron-left")
-			span.sr-only Previous
+			span.glyphicon.glyphicon-chevron-left
+			//span.sr-only Previous
 		a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
-			//+icon("chevron-right")
-			span.sr-only Next
+			span.glyphicon.glyphicon-chevron-right
+			//span.sr-only Next

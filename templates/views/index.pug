@@ -17,12 +17,7 @@ block content
 
 					h3!= data.content.contentDescription
 
-					//for project in data.projects
-					//	a(href='portfolio/project/' + project.id)
-					//		if project.selectedImage
-								img(src=project.selectedImage._.image.fit(200,200)).img.img-responsive.pull-left
+					+carousel("Carousel",data.projects)#maincarousel
 
-					+carousel("Carousel",data.projects)
-		
 
 
