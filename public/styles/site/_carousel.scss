@@ -25,7 +25,7 @@
 
 .carousel-control.left,.carousel-control.right {
 	background-image:none;
-	color:#aaa;
+	color:#555;
 }
 
 .carousel-control.left {
@@ -37,5 +37,14 @@
 }
 
 .carousel-indicators {
-	
+	bottom:-40px;
+	li {
+		background-color: #fff;
+		border-color:#555;
+
+		&.active {
+			background-color:#555;
+			border-color:#555;
+		}
+	}
 }

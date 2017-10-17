@@ -5825,6 +5825,11 @@ button.close {
 .icon-bar {
   background-color: black; }
 
+.main-portrait {
+  width: 90%;
+  height: auto;
+  margin-left: -30px; }
+
 @media (min-width: 992px) {
   .carousel-inner .item.left.active {
     transform: translateX(-33%); }
@@ -5843,13 +5848,22 @@ button.close {
 
 .carousel-control.left, .carousel-control.right {
   background-image: none;
-  color: #aaa; }
+  color: #555; }
 
 .carousel-control.left {
   margin-left: -65px; }
 
 .carousel-control.right {
   margin-right: -65px; }
+
+.carousel-indicators {
+  bottom: -40px; }
+  .carousel-indicators li {
+    background-color: #fff;
+    border-color: #555; }
+    .carousel-indicators li.active {
+      background-color: #555;
+      border-color: #555; }
 
 h1 {
   font-family: 'Asap Condensed', sans-serif; }
