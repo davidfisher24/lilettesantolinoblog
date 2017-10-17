@@ -1,54 +1,37 @@
 extends ../layouts/default
 
 mixin project(project)
-	.project((user, { list: 'Project', id: project.id })).col-md-4.panel.panel-default
-
+	a(href='portfolio/project/' + project.id)
+		div(style="background-image: url(" + project.selectedImage._.image.thumbnail() + ");").project((user, { list: 'Project', id: project.id }))
 		
-		div.panel-header.text-center
-			// Title
-			h2= project.title
+			h1.project-title= project.title
 
-		div.panel.body
-			div.row
-				// Main Image
-				if project.selectedImage
-					img(src=project.selectedImage._.image.fit()).img.img-responsive.pull-left
-
-			div.row
-				// Small Images with their text
-				for image in project.projectImages
-					img(src=image._.image.fit(100,100)).img.pull-left
-					p #{image.description}
-			
-		div.panel.footer
-			// Html Content
-			p!= project.content
-
-		div.panel.footer
+	
 			// Categories and Tags
-			span Main Category: #{project.mainCategory}
-			br
-			span Sub Categories: 
-				for subCat in project.subCategories
-					span #{subCat.name} 
-			br
-			span Tags:
-				for tag in project.tags
-					span #{tag.name} 
-			br
-			a(href='portfolio/project/' + project.id)
-				span Link to page
+			//span Main Category: #{project.mainCategory}
+
+			//span Sub Categories: 
+			//	for subCat in project.subCategories
+			//		span #{subCat.name} 
+
+			//span Tags:
+			//	for tag in project.tags
+			//		span #{tag.name} 
+
+			//
+			//	span Link to page 
 
 
 
 
 block intro
-	.container
-		h1 Portfolio
+	//.container
+	//	h1 Portfolio
 	
 block content
-	.container: .row
+	.container#projects-container: .row
 
 		for project in data.projects
+			div.col.md-4.col-sm-4.col.lg-4.col-xs-4.col-lg-4.project-container
 				+project(project)
 

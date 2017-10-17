@@ -5875,3 +5875,33 @@ a {
   font-family: 'Asap Condensed', sans-serif;
   color: #333;
   font-size: 1.17em; }
+
+#projects-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0; }
+  #projects-container .row {
+    margin: 0; }
+    #projects-container .row .project-container {
+      position: relative;
+      padding: 0; }
+      #projects-container .row .project-container:hover {
+        -webkit-filter: sepia(100%);
+        filter: sepia(100%); }
+        #projects-container .row .project-container:hover .project-title {
+          color: #333; }
+      #projects-container .row .project-container .project-title {
+        position: absolute;
+        font-size: 30px;
+        top: 50%;
+        left: 50%;
+        color: white; }
+
+.project {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  padding-top: 100%; }
