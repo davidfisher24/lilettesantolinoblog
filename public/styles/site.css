@@ -5822,32 +5822,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-#header {
-  margin-top: 30px; }
+.icon-bar {
+  background-color: black; }
 
-#footer {
-  margin-top: 30px;
-  border-top: 1px solid #eeeeee;
-  padding-top: 30px;
-  color: #777777; }
-
-.gallery-image img {
-  display: block;
-  max-width: 100%;
-  height: auto; }
-
-h1 {
-  font-family: 'Asap Condensed', sans-serif; }
-
-h3 {
-  font-family: 'Asap', sans-serif; }
-
-a {
-  font-family: 'Asap Condensed', sans-serif;
-  color: #333;
-  font-size: 1.17em; }
-
-/* override position and transform in 3.3.x */
 .carousel-inner .item.left.active {
   transform: translateX(-33%); }
 
@@ -5865,4 +5842,22 @@ a {
   transform: translateX(0); }
 
 .carousel-control.left, .carousel-control.right {
-  background-image: none; }
+  background-image: none;
+  color: #aaa; }
+
+.carousel-control.left {
+  margin-left: -65px; }
+
+.carousel-control.right {
+  margin-right: -65px; }
+
+h1 {
+  font-family: 'Asap Condensed', sans-serif; }
+
+h3 {
+  font-family: 'Asap', sans-serif; }
+
+a {
+  font-family: 'Asap Condensed', sans-serif;
+  color: #333;
+  font-size: 1.17em; }

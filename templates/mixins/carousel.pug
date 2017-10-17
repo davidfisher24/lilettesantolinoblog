@@ -11,37 +11,54 @@ mixin carousel-caption(item)
 
 //- carousel
 mixin carousel(id,items)
-	.carousel.slide(id="carousel-" + id ,data-ride="carousel")
-		//- Indicators
-		ol.carousel-indicators
-			each item,index in items
-				if(index === 0)
-					li.active(data-target="#carousel-" + id, data-slide-to=index)
-				else
-					li(data-target="#carousel-" + id, data-slide-to=index)
+	.row
+		//.col-md-1.col-lg-1.col-xl-1.col-sm-1.col-xs-1
+		//	a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
+		//			span.glyphicon.glyphicon-chevron-left
+
+		.col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1.col-xs-10.col-xs-offset-1.col-lg-10.col-lg-offset-1.col-xl-10.col-xl-offset-1
+			.carousel.slide(id="carousel-" + id ,data-ride="carousel")
+				//- Indicators
+				ol.carousel-indicators
+					each item,index in items
+						if(index === 0)
+							li.active(data-target="#carousel-" + id, data-slide-to=index)
+						else
+							li(data-target="#carousel-" + id, data-slide-to=index)
 
 
-		//- Wrapper for slides
-		.carousel-inner(role="listbox")
-			each item,index in items
-				if(index === 0)
-					.item.active
-						div.col-md-4
-							a(href='portfolio/project/' + item.id)
-								img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
-								//+carousel-caption(item)
+				//- Wrapper for slides
+				.carousel-inner(role="listbox")
+					each item,index in items
+						if(index === 0)
+							.item.active
+								div.col-md-4.col-lg-4.col-xl-4.hidden-xs.hidden-sm
+									a(href='portfolio/project/' + item.id)
+										img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image.img-responsive
+										//+carousel-caption(item)
+								div.col-sm-12.col-xs-12.hidden-md.hidden-lg.hidden-xl
+									a(href='portfolio/project/' + item.id)
+										img(src=item.selectedImage._.image.thumbnail(400,400)).carousel-image.img-responsive
 
-				else
-					.item
-						div.col-md-4
-							a(href='portfolio/project/' + item.id)
-								img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image
-								//+carousel-caption(item)
+						else
+							.item
+								div.col-md-4.col-lg-4.col-xl-4.hidden-xs.hidden-sm
+									a(href='portfolio/project/' + item.id)
+										img(src=item.selectedImage._.image.thumbnail(200,200)).carousel-image.img-responsive
+										//+carousel-caption(item)
+								div.col-sm-12.col-xs-12.hidden-md.hidden-lg.hidden-xl
+									a(href='portfolio/project/' + item.id)
+										img(src=item.selectedImage._.image.thumbnail(400,400)).carousel-image.img-responsive
 
-		//-  Controls
-		a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
-			span.glyphicon.glyphicon-chevron-left
-			//span.sr-only Previous
-		a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
-			span.glyphicon.glyphicon-chevron-right
-			//span.sr-only Next
+				//-  Controls
+				a.left.carousel-control(href="#carousel-" + id, role="button", data-slide="prev")
+					span.glyphicon.glyphicon-chevron-left
+					//span.sr-only Previous
+				a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
+					span.glyphicon.glyphicon-chevron-right
+					//span.sr-only Next
+
+		//.col-md-1.col-lg-1.col-xl-1.col-sm-1.col-xs-1
+		//	a.right.carousel-control(href="#carousel-" + id, role="button", data-slide="next")
+		//			span.glyphicon.glyphicon-chevron-right
+
