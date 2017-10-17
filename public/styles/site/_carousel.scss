@@ -1,20 +1,26 @@
-.carousel-inner .item.left.active {
-  transform: translateX(-33%);
-}
-.carousel-inner .item.right.active {
-  transform: translateX(33%);
+@media (min-width: 992px) {
+	.carousel-inner .item.left.active {
+		transform: translateX(-33%);
+	}
+	.carousel-inner .item.right.active {
+		transform: translateX(33%);
+	}
+
+	.carousel-inner .item.next {
+		transform: translateX(33%)
+	}
+	.carousel-inner .item.prev {
+		transform: translateX(-33%)
+	}
+
+	.carousel-inner .item.right,
+	.carousel-inner .item.left { 
+		transform: translateX(0);
+	}
 }
 
-.carousel-inner .item.next {
-  transform: translateX(33%)
-}
-.carousel-inner .item.prev {
-  transform: translateX(-33%)
-}
-
-.carousel-inner .item.right,
-.carousel-inner .item.left { 
-  transform: translateX(0);
+#carousel-main {
+	margin: 20px 0;
 }
 
 .carousel-control.left,.carousel-control.right {
