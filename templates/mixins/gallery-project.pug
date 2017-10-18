@@ -1,0 +1,21 @@
+mixin project(project)
+	a(href='portfolio/project/' + project.id)
+		div(style="background-image: url(" + project.selectedImage._.image.thumbnail() + ");").project((user, { list: 'Project', id: project.id }))
+			div.hover-layer
+		
+		h2.project-title= project.title
+
+	
+			// Categories and Tags
+			//span Main Category: #{project.mainCategory}
+
+			//span Sub Categories: 
+			//	for subCat in project.subCategories
+			//		span #{subCat.name} 
+
+			//span Tags:
+			//	for tag in project.tags
+			//		span #{tag.name} 
+
+			//
+			//	span Link to page 

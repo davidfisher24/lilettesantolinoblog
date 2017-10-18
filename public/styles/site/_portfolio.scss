@@ -1,0 +1,52 @@
+#projects-container {
+	position:absolute;
+	left:0;
+	width:100%;
+	padding:0;
+
+	.row {
+		margin: 0;
+
+		.project-container {
+			position:relative;
+			padding:0;
+
+			&:hover {
+    			.hover-layer {
+    				position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					background-color: rgba(92,34,85,0.5);
+					z-index:1000;
+    			}
+
+    			.project-title {
+    				color:#333;
+    			}
+			}
+
+			.project-title {
+				color:black;
+				position: absolute;
+			    top: 50%;
+			    width:100%;
+			    text-align:center;
+			    opacity:0;
+			    text-transform:capitalize;
+			    font-weight:400;
+			    background:rgba(255,255,255,0.5);
+			}
+		}
+	}
+}
+
+.project {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width:100%;
+  	padding-top:100%;
+}
