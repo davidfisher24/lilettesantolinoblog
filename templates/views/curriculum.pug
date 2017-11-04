@@ -5,26 +5,93 @@ block intro
 		h1 #{data.curriculum.heading}
 		
 block content
-	.container
-		if data.curriculum.image.exists
-			img(src=data.curriculum._.image.fit(160,160)).img.pull-right
+	.col-md-4.col-lg-4.col-xl-4.hidden-sm.hidden-xs
+		img(src='images/portrait.jpg').img-responsive.main-portrait
 
-	.container
-		p #{data.curriculum.description}
+	.col-md-8.col-lg-8.col-xl-8.col-sm-12.col-xs-12
+		div.curriculum.container-fluid
+			.row#short-row-1
+				.col-md-6.col-lg-6.col-xl-6.col-sm-6.col-xs-6
+					img(src='images/mapa.gif').img-responsive
+				.col-md-6.col-lg-6.col-xl-6.col-sm-6.col-xs-6
+					img(src='images/banderas.gif').img-responsive
+			.row#short-row-2
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					img(src='images/diplomas.gif').img-responsive
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					p 2001
+					p <strong>CAD Aplicado al patronaje</strong>, sistema investronica
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					p 2002
+					p <strong>TS en Modilimso de la indumentaria </strong> en escuela no 2 de Artes y Oficios de Madrid
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					p 2003
+					p <strong>Dibujo Artistico</strong> aplicado al diseño de moda en Estudio Arjona, Madrid
+			.row
+				.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4
+					.row
+						.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4.padding-0
+							img(src='images/patronista.gif').img-responsive
+						.col-md-8.col-lg-8.col-xl-8.col-sm-8.col-xs-8
+							p.job-title MIRTO
+							p.job-date 2001-2004
+							ul
+								li Patrones
+								li Escalados
+								li Marcados
+								li Prototipos
+								li Seleccion Materiales
+								li Fichas tecnicas
+				.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4
+					.row
+						.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4.padding-0
+							img(src='images/administrativo.gif').img-responsive
+						.col-md-8.col-lg-8.col-xl-8.col-sm-8.col-xs-8
+							p.job-title IFEMA
+							p.job-date 2006-2007
+							ul
+								li Admtvo. Dpto Com. SIMM
+								li Asistente Pasarela Cibeles
+								li Azafata Traductoria
+								li Memorias de prensa
+				.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4
+					.row
+						.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4.padding-0
+							img(src='images/office_manager.gif').img-responsive
+						.col-md-8.col-lg-8.col-xl-8.col-sm-8.col-xs-8
+							p.job-title DTZ
+							p.job-date 2008-2016
+							ul
+								li Contrataccion provedores
+								li Marketing y communicacion
+								li CRM: Logipro
+								li Actualizacion Web
+								li Gestion de dominios
+								li Google Adwords
+								li Coordinacion sop. informatico
+								li Gestion de viajes
+								li Mantenimiento de la oficina
+								li Traducciones
+								li Atencion de visitas
+								li Gestion de salas de reunion
+								li Centralita telefonica
+				.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4
+				.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4
+					.row
+						.col-md-8.col-lg-8.col-xl-8.col-sm-8.col-xs-8
+							p 2017
+							p Master en diseno grafico en Gauss Multimedia
+							img(src='images/reciclado.gif').img-responsive
+						.col-md-4.col-lg-4.col-xl-4.col-sm-4.col-xs-4.padding-0
+							img(src='images/disenador.gif').img-responsive
 
-		h3 Skills
-		ul
-			for skill in data.skills
-				li #{skill.description}
-
-		h3 Education
-		ul
-			for education in data.educations
-				li #{education.description}
-				span #{education._.from.format('D MMMM YYYY')} - #{education._.to.format('D MMMM YYYY')}
-
-		h3 Experience
-		ul
-			for experience in data.experiences
-				li #{experience.description}
-				span #{experience._.from.format('D MMMM YYYY')} - #{experience._.to.format('D MMMM YYYY')}
+							
+			.row
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					p one
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					p one
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					img(src='images/languages.gif').img-responsive
+				.col-md-3.col-lg-3.col-xl-3.col-sm-3.col-xs-3
+					img(src='images/softwares.gif').img-responsive
