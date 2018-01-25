@@ -10,6 +10,7 @@
 exports.create = {
 	User: [
 		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'admin@user.com', 'password': 'admin', 'isAdmin': true },
+		{ 'name.first': 'Lilette', 'name.last': 'Santolino', 'email': 'lilettesm@gmail.com', 'password': 'l1l3tt3show', 'isAdmin': true },
 	],
 	curriculum: [
 		{ 'title' : 'My Curriculum' }
